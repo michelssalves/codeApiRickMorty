@@ -72,6 +72,7 @@ border: 1px solid #1D9790;
 border-radius: 8px;
 overflow: hidden;
 background-color: #FFF;
+font-weight: 600;
 
 }
 

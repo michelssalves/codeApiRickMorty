@@ -1,16 +1,30 @@
 <template>
   <div class="quadro">
-    <img :src="image" alt="">
-    <label for="">Name</label>
-    <input disabled type="text" id="name" :value="name">
-    <label for="">Status</label>
-    <input disabled type="text" id="status" :value="status">
-    <label for="">Specie</label>
-    <input disabled type="text" id="species" :value="species">
-    <label for="">Gender</label>
-    <input disabled type="text" id="gender" :value="gender">
-    <label class="" for="">Origin</label>
-    <input disabled type="text" id="origin" :value="origin.name">
+    <div class="imagem">
+      <img :src="image" alt="">
+    </div>
+    <ul class="informacoes">
+      <label for="">Name</label>
+      <li>
+        <input disabled type="text" id="name" :value="name">
+      </li>
+      <label for="">Status</label>
+      <li>
+        <input disabled type="text" id="status" :value="status">
+      </li>
+      <label for="">Specie</label>
+      <li>
+        <input disabled type="text" id="species" :value="species">
+      </li>
+      <label for="">Gender</label>
+      <li>
+        <input disabled type="text" id="gender" :value="gender">
+      </li>
+      <label class="" for="">Origin</label>
+      <li>
+        <input disabled type="text" id="origin" :value="origin.name">
+      </li>
+    </ul>
   </div>
 </template>
 <script>
@@ -61,15 +75,34 @@ export default {
 
 <style scoped>
 img {
-  
+
   height: 150px;
 
 }
-
 .quadro {
 
   width: 300px;
-  background-color: red;
+  height: 360px;
+  background-color: #8d9e9d;
+  border-radius: 60px;
+
+}
+img{
+  margin-top: 10px;
+  border-radius: 60px;
+}
+.quadro .imagem {
+
+  margin-inline: 70px;
+ 
+
 }
 
+.quadro .informacoes {
+
+  list-style: none;
+  font-weight: 600;
+  margin-inline: 20px;
+
+}
 </style>
