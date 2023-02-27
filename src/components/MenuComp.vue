@@ -12,3 +12,35 @@ export default {
 
 }
 </script>
+<style>
+.menu ul {
+
+  display: flex;
+  background-color: #777;
+  list-style: none;
+  padding: 0;
+  border-radius: 50px;
+  overflow: hidden;
+}
+
+.menu a {
+  display: flex;
+  justify-content: center;
+  padding: 10px 25px;
+  text-decoration: none;
+  font-weight: 600;
+
+}
+
+.menu .active {
+  background-color: #1D9790;
+}
+
+.menu .active a {
+  color: #FFF;
+}
+
+.menu a {
+  color: #FFF;
+}
+</style>

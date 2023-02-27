@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="teste">
     <Header :title="title"></Header>
     <router-view />
   </div>
@@ -18,3 +18,4 @@ export default {
   },
 }
 </script>
+<style></style>

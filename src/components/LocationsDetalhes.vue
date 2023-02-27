@@ -57,9 +57,30 @@ export default {
 
 }
 </script>
-<style>
-.size-img {
-  width: 75px;
-  height: 75px;
+<style scoped>
+.tabela-custom {
+
+list-style: none;
+border: 1px solid #1D9790;
+border-radius: 8px;
+overflow: hidden;
+background-color: #FFF;
+
+}
+
+.tabela-custom .fields-table {
+
+padding: 15px 30px;
+cursor: pointer;
+border: 1px solid #777777;
+}
+
+.tabela-custom .row-table:hover {
+background-color: #FFF3;
+}
+
+.tabela-custom .fields-table:nth-child(n + 2) {
+border-top: 1px solid #777777;
+
 }
 </style>

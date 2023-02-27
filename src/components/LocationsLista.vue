@@ -1,5 +1,5 @@
 <template>
-  <div class="usuario-lista">
+  <div class="">
     <div class="container">
       <table class="tabela-custom">
         <thead>
@@ -21,25 +21,27 @@
           </tr>
         </tbody>
       </table>
-      <nav class="paginationLocation" aria-label="Page navigation example">
-        <ul class="pagination pagination-lg justify-content-center">
-          <li class="page-item">
-            <a class="page-link" @click="currentPage = 1">Primeira</a>
+      <div class="container-pagination ">
+        <nav class="pagination">
+        <ul>
+          <li>
+            <a class="first-last-page" @click="currentPage = 1">Primeira</a>
           </li>
-          <li class="page-item" v-if="currentPage - 1 > 0" @click="currentPage--">
-            <a class="page-link">{{ currentPage - 1 }}</a>
+          <li v-if="currentPage - 1 > 0" @click="currentPage--">
+            <a>{{ currentPage - 1 }}</a>
           </li>
-          <li class="page-item active">
-            <a class="page-link">{{ currentPage }}</a>
+          <li class="active">
+            <a>{{ currentPage }}</a>
           </li>
-          <li class="page-item" v-if="currentPage + 1 <= results" @click="currentPage++">
-            <a class="page-link">{{ currentPage + 1 }}</a>
+          <li v-if="currentPage + 1 <= results" @click="currentPage++">
+            <a>{{ currentPage + 1 }}</a>
           </li>
-          <li class="page-item">
-            <a class="page-link" @click="currentPage = results">Ultima</a>
+          <li>
+            <a class="first-last-page" @click="currentPage = results">Ultima</a>
           </li>
         </ul>
       </nav>
+      </div>
     </div>
   </div>
 </template>
@@ -93,15 +95,85 @@ export default {
 
 }
 </script>
-<style>
-.size-img {
-  width: 75px;
-  height: 75px;
+<style scoped>
+.tabela-custom {
+
+list-style: none;
+border: 1px solid #1D9790;
+border-radius: 8px;
+overflow: hidden;
+background-color: #FFF;
+font-weight: 600;
+
 }
 
-.paginationLocation {
-  cursor: pointer;
-  margin-top: 5px;
+.tabela-custom .fields-table {
 
+padding: 0px 30px;
+cursor: pointer;
+border: 1px solid #777777;
+
+}
+
+.tabela-custom .row-table:hover {
+background-color: #FFF3;
+}
+
+.tabela-custom .fields-table:nth-child(n + 2) {
+border-top: 1px solid #777777;
+
+}
+
+.pagination ul {
+
+  justify-content: center;
+  display: flex;
+  list-style: none;
+  border-radius: 50px;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.pagination ul {
+
+  justify-content: center;
+  display: flex;
+  list-style: none;
+  border-radius: 50px;
+  overflow: hidden;
+  cursor: pointer;
+  margin-right: 20px;
+}
+
+.pagination a {
+
+  display: flex;
+  background-color: #ffffff;
+  padding: 10px 10px;
+  text-decoration: none;
+  font-weight: 600;
+  border: 1px solid;
+  border-radius: 50px;
+
+
+}
+
+.pagination a:hover {
+
+  background-color: #1D9790;
+
+}
+
+.pagination .active {
+  background-color: #1D9790;
+  border-radius: 50px;
+}
+
+.pagination .active a {
+  background-color: #1D9790;
+}
+
+.pagination .first-last-page {
+  background-color: #ffffff;
 }
 </style>
