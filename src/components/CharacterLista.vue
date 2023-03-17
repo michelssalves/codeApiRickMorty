@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div>
+    <div class="table-wrapper">
       <table class="tabela-custom">
         <thead>
           <tr class="row-table">
@@ -186,6 +186,7 @@ border-radius: 8px;
 overflow: hidden;
 background-color: #FFF;
 font-weight: 600;
+overflow-x: auto;
 
 }
 
@@ -245,4 +246,12 @@ border-top: 1px solid #777777;
 .pagination .first-last-page {
   background-color: #ffffff;
 }
+  /* Tabela responsiva */
+  .table-wrapper {
+    
+  }
+  .table-wrapper table {
+    width: 100%;
+    white-space: nowrap;
+  }
 </style>
